@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useContext } from "react";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Logo.png";
 
 import {
   FaSearch,
