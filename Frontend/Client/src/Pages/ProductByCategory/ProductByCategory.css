@@ -1,0 +1,365 @@
+.common-product-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff7fa;
+    margin-top: 70px;
+}
+
+.product-page-header {
+    text-align: center;
+    padding: 55px 20px 48px;
+}
+
+.product-header-small {
+    color: #e52d83;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.product-page-header h1 {
+    font-size: clamp(30px, 4vw, 46px);
+    color: #242124;
+    margin: 14px 0;
+}
+
+.product-page-header p {
+    color: #777;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.common-products-section {
+    max-width: 1500px;
+    width: 92%;
+    margin: auto;
+    padding: 0 0 60px;
+}
+
+.products-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.products-count h2 {
+    font-size: 23px;
+    color: #292329;
+}
+
+.products-count span {
+    color: #e52d83;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.common-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.common-product-card {
+    background: white;
+    border: 1px solid #f6dce8;
+    border-radius: 22px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.common-product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(226, 45, 131, 0.12);
+}
+
+.common-product-image {
+    height: 300px;
+    background: #fff0f6;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.common-product-image img {
+    width: 92%;
+    height: 90%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.common-product-card:hover .common-product-image img {
+    transform: scale(1.05);
+}
+
+.common-product-badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+    background: #fff;
+    color: #e52d83;
+    padding: 8px 13px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.common-wishlist-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 2;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.heart-outline {
+    color: white;
+    fill: white;
+    stroke: #e52d83;
+    stroke-width: 50;
+    transition: 0.3s ease;
+}
+
+.heart-active {
+    color: #e52d83;
+    fill: #e52d83;
+    stroke: #e52d83;
+    stroke-width: 0;
+    transition: 0.3s ease;
+}
+
+.heart-outline,
+.heart-active {
+    font-size: 23px;
+    width: 23px;
+    height: 23px;
+}
+
+.common-product-details {
+    padding: 22px;
+}
+
+.common-product-category {
+    color: #c18b19;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.common-product-details h3 {
+    font-size: 21px;
+    color: #252025;
+    margin: 10px 0;
+}
+
+.common-product-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.common-product-rating span {
+    color: #e9a51b;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.common-product-rating small {
+    color: #444;
+    font-size: 13px;
+}
+
+.common-product-bottom {
+    width: 100%;
+    padding-top: 15px;
+    border-top: 1px solid #f0e3e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.common-product-bottom h4 {
+    color: #e52d83;
+    font-size: 21px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.common-add-cart-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 76px;
+    height: 38px;
+    padding: 0 13px;
+    border: none;
+    border-radius: 9px;
+    background: #292126;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.common-add-cart-btn:hover {
+    background: #e52d83;
+    transform: translateY(-2px);
+    box-shadow:
+        0 7px 16px rgba(213, 154, 55, 0.25);
+}
+
+.common-add-cart-btn svg {
+    width: 13px;
+    height: 13px;
+}
+
+.no-products {
+    text-align: center;
+    padding: 70px 20px;
+    background: white;
+    border-radius: 15px;
+}
+
+.no-products h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.no-products p {
+    color: #888;
+}
+
+@media (max-width: 1100px) {
+    .common-products-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .common-product-image {
+        height: 300px;
+    }
+
+    .common-product-details {
+        padding: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-page-header {
+        padding: 40px 18px;
+    }
+
+    .product-page-header p {
+        font-size: 15px;
+    }
+
+    .common-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .common-product-image {
+        height: 260px;
+    }
+
+    .common-product-details h3 {
+        font-size: 17px;
+    }
+
+    .common-product-bottom {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .common-products-section {
+        width: 94%;
+    }
+
+    .product-header-small {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .product-page-header h1 {
+        font-size: 29px;
+    }
+
+    .products-count h2 {
+        font-size: 18px;
+    }
+
+    .common-products-grid {
+        gap: 10px;
+    }
+
+    .common-product-image {
+        height: 190px;
+    }
+
+    .common-product-image img {
+        width: 75%;
+        height: 85%;
+    }
+
+    .common-product-details {
+        padding: 12px;
+    }
+
+    .common-product-details h3 {
+        font-size: 15px;
+        min-height: 40px;
+        margin: 8px 0 15px;
+    }
+
+    .common-product-bottom h4 {
+        font-size: 17px;
+    }
+
+    .common-add-cart-btn {
+        width: 100%;
+        padding: 11px 8px;
+        font-size: 12px;
+    }
+
+    .common-wishlist-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .common-product-badge {
+        top: 10px;
+        left: 10px;
+        padding: 6px 9px;
+    }
+
+    .common-product-rating span {
+        font-size: 15px;
+    }
+}

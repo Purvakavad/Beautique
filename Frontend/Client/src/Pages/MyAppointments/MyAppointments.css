@@ -1,0 +1,229 @@
+.my-appointments-page {
+    min-height: 100vh;
+    background: #fff9fb;
+    padding-bottom: 80px;
+}
+
+.appointments-hero {
+    background: linear-gradient(120deg, #f9dce8, #fff0f5);
+    text-align: center;
+    padding: 140px 20px 80px;
+}
+
+.appointments-hero span {
+    color: #b76e8d;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.appointments-hero h1 {
+    color: #542c40;
+    font-size: 46px;
+    margin: 18px 0 12px;
+}
+
+.appointments-hero p {
+    color: #856174;
+    font-size: 15px;
+}
+
+.appointments-container {
+    max-width: 1150px;
+    margin: 65px auto;
+    padding: 0 25px;
+}
+
+.appointments-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.appointments-heading h2 {
+    color: #492a3b;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.appointments-heading p {
+    color: #927b87;
+    font-size: 14px;
+}
+
+.appointment-count {
+    background: #f4dce7;
+    color: #a34f74;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.appointments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.appointment-card {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #f0dfe7;
+    box-shadow: 0 8px 30px rgba(100, 45, 70, 0.06);
+    transition: 0.3s ease;
+}
+
+.appointment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(100, 45, 70, 0.12);
+}
+
+.appointment-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.appointment-service-icon {
+    width: 48px;
+    height: 48px;
+    background: #fceaf1;
+    color: #b65f83;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.appointment-status {
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.appointment-status.pending {
+    background: #fff3d8;
+    color: #b27b17;
+}
+
+.appointment-status.confirmed {
+    background: #e0f5e8;
+    color: #27834b;
+}
+
+.appointment-status.completed {
+    background: #e5edff;
+    color: #4568b4;
+}
+
+.appointment-status.cancelled {
+    background: #ffe6e6;
+    color: #c34343;
+}
+
+.appointment-card h3 {
+    color: #4c2b3b;
+    font-size: 21px;
+    margin-bottom: 22px;
+}
+
+.appointment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.appointment-info p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #816b77;
+    font-size: 14px;
+}
+
+.appointment-info svg {
+    color: #b76e8d;
+}
+
+.appointment-divider {
+    height: 1px;
+    background: #f1e5eb;
+    margin: 23px 0;
+}
+
+.appointment-customer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.appointment-customer span {
+    font-size: 11px;
+    color: #a18c97;
+}
+
+.appointment-customer h4 {
+    font-size: 13px;
+    color: #573548;
+    margin-top: 7px;
+}
+
+.appointment-message,
+.appointment-empty {
+    text-align: center;
+    padding: 65px 20px;
+    background: white;
+    border-radius: 15px;
+    color: #866c7a;
+}
+
+.appointment-empty svg {
+    font-size: 42px;
+    color: #c17a98;
+    margin-bottom: 20px;
+}
+
+.appointment-empty h3 {
+    color: #573548;
+    margin-bottom: 10px;
+}
+
+.appointment-empty p {
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .appointments-hero {
+        padding: 120px 15px 65px;
+    }
+
+    .appointments-hero h1 {
+        font-size: 32px;
+    }
+
+    .appointments-container {
+        margin: 40px auto;
+        padding: 0 16px;
+    }
+
+    .appointments-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .appointments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-card {
+        padding: 22px;
+    }
+}
