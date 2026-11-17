@@ -1,4 +1,4 @@
-import Appointment from "../Models/Appointment.js";
+import Appointment from "../models/Appointment.js";
 import mongoose from "mongoose";
 export const createAppointment = async (req, res) => {
     try {
