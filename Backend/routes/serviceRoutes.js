@@ -6,7 +6,7 @@ import {
     getSingleService,
     updateService,
     deleteService,
-} from "../controllers/serviceController.js";
+} from "../Controllers/serviceController.js";
 import adminAuth from "../middleware/adminAuth.js";
 const router = express.Router();
 router.get("/active", getActiveServices);

@@ -6,7 +6,7 @@ import {
     logout,
     updateProfile,
     getAllUsers
-} from "../controllers/authController.js";
+} from "../Controllers/authController.js";
 import authAdmin from '../middleware/adminAuth.js'
 import userAuth from "../middleware/userAuth.js";
 const router = express.Router();

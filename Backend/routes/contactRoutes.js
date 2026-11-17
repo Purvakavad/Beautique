@@ -4,7 +4,7 @@ import {
     getAllContacts,
     updateContactStatus,
     deleteContact
-} from "../controllers/contactController.js";
+} from "../Controllers/contactController.js";
 import adminAuth from "../middleware/adminAuth.js";
 const router = express.Router();
 router.post("/", createContact);
