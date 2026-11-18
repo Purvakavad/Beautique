@@ -20,7 +20,6 @@ function Login() {
     e.preventDefault();
     try {
       setLoading(true);
-      console.log("Login button clicked");
       const response = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/auth/login`,
         { email, password },
@@ -34,7 +33,6 @@ function Login() {
         navigate("/");
       }
     } catch (error) {
-      console.log("Login Error:", error);
       alert(error.response?.data?.message || "Login failed");
     } finally {
       setLoading(false);
@@ -43,7 +41,6 @@ function Login() {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        {/* LOGO */}
         <div className="auth-logo">
           B
         </div>
@@ -57,7 +54,6 @@ function Login() {
           Login to your Beautique account.
         </p>
         <form onSubmit={handleLogin}>
-          {/* EMAIL */}
           <div className="auth-input-group">
             <FaEnvelope />
             <input
@@ -69,7 +65,6 @@ function Login() {
               }
             />
           </div>
-          {/* PASSWORD */}
           <div className="auth-input-group">
             <FaLock />
             <input
@@ -81,7 +76,6 @@ function Login() {
               }
             />
           </div>
-          {/* LOGIN BUTTON */}
           <button
             type="submit"
             className="auth-main-btn"
@@ -96,7 +90,6 @@ function Login() {
             )}
           </button>
         </form>
-        {/* REGISTER */}
         <div className="auth-bottom-text">
           Don't have an account?
           <button
@@ -108,7 +101,6 @@ function Login() {
             Create Account
           </button>
         </div>
-        {/* ADMIN */}
         <button
           type="button"
           className="auth-admin-link"

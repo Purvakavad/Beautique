@@ -145,7 +145,6 @@ const Register = () => {
             <div>✓ Book beauty appointments</div>
           </div>
         </div>
-        {/* RIGHT SIDE */}
         <div className="register-right">
           <div className="register-heading">
             <h2>Create Account</h2>
@@ -153,20 +152,17 @@ const Register = () => {
               Register as a Beautique customer
             </p>
           </div>
-          {/* SUCCESS MESSAGE */}
           {message && (
             <div className="register-success">
               {message}
             </div>
           )}
-          {/* ERROR MESSAGE */}
           {error && (
             <div className="register-error">
               {error}
             </div>
           )}
           <form onSubmit={handleRegister}>
-            {/* NAME */}
             <div className="register-input-group">
               <label>
                 Full Name <span>*</span>
@@ -183,7 +179,6 @@ const Register = () => {
                 />
               </div>
             </div>
-            {/* EMAIL */}
             <div className="register-input-group">
               <label>
                 Email Address <span>*</span>
@@ -200,7 +195,6 @@ const Register = () => {
                 />
               </div>
             </div>
-            {/* PHONE */}
             <div className="register-input-group">
               <label>
                 Phone Number
@@ -216,7 +210,6 @@ const Register = () => {
                 />
               </div>
             </div>
-            {/* PASSWORD */}
             <div className="register-input-group">
               <label>
                 Password <span>*</span>
@@ -233,7 +226,6 @@ const Register = () => {
                 />
               </div>
             </div>
-            {/* CONFIRM PASSWORD */}
             <div className="register-input-group">
               <label>
                 Confirm Password <span>*</span>
@@ -250,7 +242,6 @@ const Register = () => {
                 />
               </div>
             </div>
-            {/* REGISTER BUTTON */}
             <button
               type="submit"
               className="register-button"
@@ -261,7 +252,6 @@ const Register = () => {
                 : "Create Account"}
             </button>
           </form>
-          {/* LOGIN LINK */}
           <div className="register-login-link">
             <span>
               Already have an account?

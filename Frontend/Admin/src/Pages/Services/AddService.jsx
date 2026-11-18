@@ -79,10 +79,6 @@ const AddService = () => {
                 navigate("/services");
             }
         } catch (error) {
-            console.log(
-                "Add Service Error:",
-                error.response?.data || error.message
-            );
             alert(
                 error.response?.data?.message ||
                 "Unable to add service. Please try again."

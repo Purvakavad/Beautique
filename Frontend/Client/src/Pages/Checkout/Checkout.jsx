@@ -144,10 +144,6 @@ function Checkout() {
                                 );
                             }
                         } catch (error) {
-                            console.log(
-                                "PAYMENT VERIFY ERROR:",
-                                error.response?.data || error.message
-                            );
                             alert(
                                 error.response?.data?.message ||
                                 "Payment verification failed. Please contact support."
@@ -164,7 +160,6 @@ function Checkout() {
                 };
                 const razorpay = new window.Razorpay(options);
                 razorpay.on("payment.failed", async function (response) {
-                    console.log("PAYMENT FAILED:", response.error);
                     const metadata = response.error?.metadata || {};
                     try {
                         if (metadata.order_id && metadata.payment_id) {

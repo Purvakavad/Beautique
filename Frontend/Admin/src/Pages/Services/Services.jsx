@@ -149,10 +149,6 @@ const Services = () => {
                 await fetchServices();
             }
         } catch (error) {
-            console.log(
-                "Update Service Error:",
-                error.response?.data || error.message
-            );
             alert(
                 error.response?.data?.message ||
                 "Unable to update service."
@@ -184,10 +180,6 @@ const Services = () => {
                 await fetchServices();
             }
         } catch (error) {
-            console.log(
-                "Delete Service Error:",
-                error.response?.data || error.message
-            );
             alert(
                 error.response?.data?.message ||
                 "Unable to delete service."

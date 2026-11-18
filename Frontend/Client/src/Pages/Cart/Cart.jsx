@@ -25,10 +25,6 @@ function Cart() {
         setCartItems(response.data.cart.items || []);
       }
     } catch (error) {
-      console.log(
-        "Update Quantity Error:",
-        error.response?.data || error.message
-      );
       alert(
         error.response?.data?.message ||
         "Unable to update quantity"
@@ -50,10 +46,6 @@ function Cart() {
         setCartItems(response.data.cart.items || []);
       }
     } catch (error) {
-      console.log(
-        "Remove Cart Error:",
-        error.response?.data || error.message
-      );
       alert(
         error.response?.data?.message ||
         "Unable to remove product"

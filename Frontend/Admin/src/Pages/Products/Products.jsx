@@ -40,7 +40,6 @@ const Products = ({
     try {
       const response = await axios.get(
         `${import.meta.env.VITE_BACKEND_URL}/api/Product/getProducts`, { withCredentials: true });
-      console.log("Products Response:", response.data);
       const data = response.data;
       setProducts(
         Array.isArray(data)
@@ -121,7 +120,6 @@ const Products = ({
   };
   const handleEditClick = (product) => {
     setSelectedProduct(product);
-    console.log("update btn click")
     setFormData({
       name: product.name || "",
       category: product.category || "",
@@ -187,7 +185,6 @@ const Products = ({
         data,
         { withCredentials: true }
       );
-      console.log("pro up", response.data)
       if (response.data.success) {
         alert("Product updated successfully!");
         handleCloseModal();
@@ -220,7 +217,6 @@ const Products = ({
   return (
     <>
       <div className="products-page">
-        {/* Page Header */}
         <div className="products-header">
           <div className="products-heading">
             <span className="products-subtitle">
@@ -239,7 +235,6 @@ const Products = ({
             Add Product
           </button>
         </div>
-        {/* Search and Filter */}
         <div className="products-filter">
           <div className="product-search">
             <span className="search-icon">⌕</span>
@@ -280,13 +275,11 @@ const Products = ({
             </select>
           </div>
         </div>
-        {/* Product Count */}
         <div className="product-count">
           <span>✿</span>
           Showing <strong>{filteredProducts.length}</strong> of{" "}
           <strong>{products.length}</strong> products
         </div>
-        {/* Product Table */}
         <div className="products-table-wrapper">
           <table className="products-table">
             <thead>
@@ -402,7 +395,6 @@ const Products = ({
           </table>
         </div>
       </div >
-      {/* VIEW SINGLE PRODUCT MODAL */}
       {isViewOpen && (
         <div
           className="view-product-overlay"
@@ -412,7 +404,6 @@ const Products = ({
             className="view-product-modal"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* HEADER */}
             <div className="view-product-header">
               <div>
                 <span>BEAUTIQUE PRODUCT</span>
@@ -425,28 +416,24 @@ const Products = ({
                 ×
               </button>
             </div>
-            {/* LOADING */}
             {viewLoading ? (
               <div className="view-product-loading">
                 Loading product details...
               </div>
             ) : viewProduct ? (
               <>
-                {/* PRODUCT IMAGE */}
                 <div className="view-product-image">
                   <img
                     src={viewProduct.image || "/placeholder.png"}
                     alt={viewProduct.name}
                   />
                 </div>
-                {/* PRODUCT NAME */}
                 <div className="view-product-title">
                   <h3>{viewProduct.name}</h3>
                   <span className="view-product-category">
                     {viewProduct.category}
                   </span>
                 </div>
-                {/* PRODUCT DETAILS */}
                 <div className="view-product-details">
                   <div className="view-detail-item">
                     <span>Product ID</span>
@@ -489,7 +476,6 @@ const Products = ({
                     </p>
                   </div>
                 </div>
-                {/* FOOTER */}
                 <div className="view-product-footer">
                   <button
                     type="button"
@@ -507,7 +493,6 @@ const Products = ({
           </div>
         </div>
       )}
-      {/* EDIT PRODUCT MODAL */}
       {isEditOpen && (
         <div className="edit-modal-overlay" onClick={handleCloseModal}>
           <div className="edit-modal" onClick={(e) => e.stopPropagation()}>
@@ -646,7 +631,6 @@ const Products = ({
           </div>
         </div>
       )}
-      {/* DELETE CONFIRMATION MODAL */}
       {deleteProduct && (
         <div
           className="delete-modal-overlay"

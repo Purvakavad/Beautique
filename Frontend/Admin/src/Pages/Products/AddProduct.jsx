@@ -160,7 +160,6 @@ const AddProduct = () => {
             }
         } catch (err) {
             console.error("Add Product Error:", err);
-            console.log("Backend Error:", err.response?.data);
             setError(
                 err.response?.data?.message ||
                 "Product could not be added."

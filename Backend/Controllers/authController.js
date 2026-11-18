@@ -34,8 +34,7 @@ export const register = async (req, res) => {
             phone,
             password: hashedPassword
         });
-        console.log("user created by register")
-        console.log("User Created Successfully:", user._id);
+
         return res.status(201).json({
             success: true,
             message: "Registration successful",
@@ -66,7 +65,6 @@ export const login = async (req, res) => {
         const user = await User.findOne({
             email: email.toLowerCase().trim()
         });
-        console.log("Login User Found:", !!user);
         if (!user) {
             return res.status(401).json({
                 success: false,
@@ -77,7 +75,6 @@ export const login = async (req, res) => {
             password,
             user.password
         );
-        console.log("Password Match:", isMatch);
         if (!isMatch) {
             return res.status(401).json({
                 success: false,
@@ -94,10 +91,12 @@ export const login = async (req, res) => {
                 expiresIn: "7d"
             }
         );
+        const isProduction = process.env.NODE_ENV === "production";
+
         res.cookie("userToken", token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: "lax",
+            secure: isProduction,
+            sameSite: isProduction ? "none" : "lax",
             maxAge: 7 * 24 * 60 * 60 * 1000,
             path: "/"
         });
@@ -128,7 +127,6 @@ export const login = async (req, res) => {
 export const getProfile = async (req, res) => {
     try {
         const userId = req.user.id;
-        console.log("profile user id0", userId)
         const user = await User.findById(userId)
             .select("-password");
         if (!user) {
@@ -159,10 +157,12 @@ export const logout = async (req, res) => {
                 lastLogout: new Date()
             }
         });
+        const isProduction = process.env.NODE_ENV === "production";
+
         res.clearCookie("userToken", {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: "lax",
+            secure: isProduction,
+            sameSite: isProduction ? "none" : "lax",
             path: "/"
         });
         return res.status(200).json({

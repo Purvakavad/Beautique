@@ -9,9 +9,7 @@ body {
   background: #FFF7FA;
 }
 
-/* =================================
-   NAVBAR
-================================= */
+
 
 .navbar {
   width: 100%;
@@ -29,7 +27,7 @@ body {
   z-index: 999;
 }
 
-/* LOGO */
+
 
 .logo {
   flex-shrink: 0;
@@ -42,7 +40,7 @@ body {
   display: block;
 }
 
-/* NAV LINKS */
+
 
 .nav-links {
   display: flex;
@@ -64,7 +62,7 @@ body {
   color: #E75480;
 }
 
-/* RIGHT SIDE */
+
 
 .nav-right {
   display: flex;
@@ -84,7 +82,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* BOOK NOW BUTTON */
+
 
 .nav-right .book-now-btn {
   padding: 12px 25px;
@@ -104,7 +102,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* MOBILE MENU BUTTON */
+
 
 .menu-toggle {
   display: none;
@@ -115,9 +113,7 @@ body {
   cursor: pointer;
 }
 
-/* =================================
-   USER DROPDOWN
-================================= */
+
 
 .user-menu {
   position: relative;
@@ -218,9 +214,7 @@ body {
   }
 }
 
-/* =================================
-   CART
-================================= */
+
 
 .cart-icon {
   position: relative;
@@ -246,9 +240,7 @@ body {
   font-weight: 700;
 }
 
-/* =================================
-   SEARCH BOX
-================================= */
+
 
 .search-icon {
   cursor: pointer;
@@ -337,9 +329,7 @@ body {
   color: white;
 }
 
-/* =================================
-   TABLET RESPONSIVE
-================================= */
+
 
 @media (max-width: 1100px) {
   .navbar {
@@ -373,9 +363,7 @@ body {
   }
 }
 
-/* =================================
-   MOBILE RESPONSIVE
-================================= */
+
 
 @media (max-width: 768px) {
 
@@ -389,7 +377,7 @@ body {
     height: 65px;
   }
 
-  /* MOBILE NAV LINKS */
+
 
   .nav-links {
     position: absolute;
@@ -426,7 +414,7 @@ body {
     border-bottom: none;
   }
 
-  /* RIGHT SIDE */
+
 
   .nav-right {
     gap: 16px;
@@ -441,7 +429,7 @@ body {
     font-size: 13px;
   }
 
-  /* HAMBURGER */
+
 
   .menu-toggle {
     display: flex;
@@ -451,7 +439,7 @@ body {
     padding: 4px;
   }
 
-  /* USER DROPDOWN */
+
 
   .user-dropdown {
     position: absolute;
@@ -464,7 +452,7 @@ body {
     display: none;
   }
 
-  /* SEARCH */
+
 
   .navbar-search-box {
     top: 75px;
@@ -480,9 +468,7 @@ body {
   }
 }
 
-/* =================================
-   SMALL MOBILE
-================================= */
+
 
 @media (max-width: 480px) {
 
@@ -545,9 +531,7 @@ body {
   }
 }
 
-/* =================================
-   EXTRA SMALL MOBILE
-================================= */
+
 
 @media (max-width: 360px) {
 

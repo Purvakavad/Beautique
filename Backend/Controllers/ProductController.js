@@ -78,7 +78,6 @@ export const addProduct = async (req, res) => {
   }
 };
 export const getProducts = async (req, res) => {
-  console.log("getProduct con")
   try {
     const products = await Product.find()
       .sort({ createdAt: -1 });
@@ -100,7 +99,6 @@ export const getProducts = async (req, res) => {
 };
 export const updateProduct = async (req, res) => {
   try {
-    console.log("product controller update");
     const product = await Product.findById(req.params.id);
     if (!product) {
       return res.status(404).json({

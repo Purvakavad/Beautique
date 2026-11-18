@@ -17,7 +17,6 @@ function Wishlist() {
     useContext(ProductContext);
   return (
     <div className="wishlist-page">
-      {/* ================= HERO ================= */}
       <section className="wishlist-hero">
         <div className="wishlist-content">
           <p className="wishlist-small-title">
@@ -67,9 +66,7 @@ function Wishlist() {
                   className="wishlist-product-card"
                   key={productId || index}
                 >
-                  {/* IMAGE */}
                   <div className="wishlist-product-image">
-                    {/* REMOVE HEART */}
                     <button
                       type="button"
                       className="wishlist-remove-top"

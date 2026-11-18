@@ -20,7 +20,6 @@ function Categories() {
         <h2>Beauty Categories</h2>
       </div>
       <div className="category-grid">
-        {/* MAKEUP */}
         <div
           className="category-card"
           onClick={() => handleCategoryClick("Makeup")}
@@ -29,7 +28,6 @@ function Categories() {
           <h3>Makeup</h3>
           <p>Luxury Lipsticks & Makeup Kits</p>
         </div>
-        {/* SKINCARE */}
         <div
           className="category-card"
           onClick={() => handleCategoryClick("Skincare")}
@@ -38,7 +36,6 @@ function Categories() {
           <h3>Skincare</h3>
           <p>Healthy & Glowing Skin Products</p>
         </div>
-        {/* PERFUME */}
         <div
           className="category-card"
           onClick={() => handleCategoryClick("Perfume")}
@@ -47,7 +44,6 @@ function Categories() {
           <h3>Perfume</h3>
           <p>Luxury Fragrances Collection</p>
         </div>
-        {/* HAIR CARE */}
         <div
           className="category-card"
           onClick={() => handleCategoryClick("Haircare")}
@@ -56,7 +52,6 @@ function Categories() {
           <h3>Hair Care</h3>
           <p>Healthy Hair Essentials</p>
         </div>
-        {/* NAIL CARE */}
         <div
           className="category-card"
           onClick={() => handleCategoryClick("Nail Care")}
@@ -65,7 +60,6 @@ function Categories() {
           <h3>Nail Care</h3>
           <p>Nail Polish & Nail Art</p>
         </div>
-        {/* BODY CARE */}
         <div
           className="category-card"
           onClick={() => handleCategoryClick("Body Care")}

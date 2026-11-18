@@ -35,7 +35,7 @@ function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // CHECK AUTH
+
   const checkAuth = async () => {
     try {
       const response = await axios.get(
@@ -65,7 +65,7 @@ function Navbar() {
     };
   }, []);
 
-  // SEARCH
+
   const handleSearch = () => {
     if (searchQuery.trim()) {
       navigate("/products");
@@ -74,7 +74,7 @@ function Navbar() {
     }
   };
 
-  // USER
+
   const handleUserClick = () => {
     if (!user) {
       navigate("/login");
@@ -84,7 +84,7 @@ function Navbar() {
     }
   };
 
-  // LOGOUT
+
   const handleLogout = async () => {
     try {
       const response = await axios.post(
@@ -109,8 +109,6 @@ function Navbar() {
       );
     }
   };
-
-  // CLOSE MOBILE MENU
   const closeMenu = () => {
     setMenuOpen(false);
     setDropdownOpen(false);
@@ -119,15 +117,11 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-
-        {/* LOGO */}
         <div className="logo">
           <Link to="/" onClick={closeMenu}>
             <img src={logo} alt="Beautique Logo" />
           </Link>
         </div>
-
-        {/* NAV LINKS */}
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li><Link to="/" onClick={closeMenu}>Home</Link></li>
           <li><Link to="/about" onClick={closeMenu}>About</Link></li>
@@ -136,11 +130,7 @@ function Navbar() {
           <li><Link to="/Categories" onClick={closeMenu}>Categories</Link></li>
           <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
         </ul>
-
-        {/* RIGHT SIDE */}
         <div className="nav-right">
-
-          {/* SEARCH */}
           <FaSearch
             className="icons search-icon"
             onClick={() => {
@@ -148,8 +138,6 @@ function Navbar() {
               setMenuOpen(false);
             }}
           />
-
-          {/* WISHLIST */}
           <FaHeart
             className="icons heart-icon"
             onClick={() => {
@@ -157,8 +145,6 @@ function Navbar() {
               closeMenu();
             }}
           />
-
-          {/* USER MENU */}
           <div
             className="user-menu"
             onMouseEnter={() => {
@@ -230,8 +216,6 @@ function Navbar() {
               </div>
             )}
           </div>
-
-          {/* CART */}
           <div
             className="cart-icon"
             onClick={() => {
@@ -245,8 +229,6 @@ function Navbar() {
               {cartCount}
             </span>
           </div>
-
-          {/* BOOK NOW */}
           <button
             className="book-now-btn"
             onClick={() => {
@@ -256,8 +238,6 @@ function Navbar() {
           >
             Book Now
           </button>
-
-          {/* MOBILE MENU BUTTON */}
           <button
             className="menu-toggle"
             onClick={() => {
@@ -271,8 +251,6 @@ function Navbar() {
 
         </div>
       </nav>
-
-      {/* SEARCH BOX */}
       {searchOpen && (
         <div className="navbar-search-box">
 

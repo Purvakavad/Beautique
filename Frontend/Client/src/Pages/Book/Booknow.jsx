@@ -56,7 +56,6 @@ function Booknow() {
       }
       );
       const data = response.data;
-      console.log("Appointment Response:", data);
       if (!data.success) {
         alert(data.message || "Failed to book appointment.");
         return;
