@@ -105,7 +105,7 @@ function Login() {
           type="button"
           className="auth-admin-link"
           onClick={() =>
-            navigate("/admin")
+            window.location.href = "https://beautique-admin.onrender.com/"
           }
         >
           <FaUser />

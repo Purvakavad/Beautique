@@ -47,7 +47,8 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/order-success" element={<OrderSuccess />} />
         <Route path="/payment-success" element={<PaymentSuccess />} />
-        <Route path="/myappointment" element={<MyAppointments />}></Route>
+
+        <Route path="/myappointment" element={<MyAppointments />}></Route
         <Route path="/myorders" element={<MyOrders />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

@@ -6,7 +6,9 @@ The project includes a separate admin panel for managing products, categories, o
 
 ## Live Demo
 
-**Coming Soon...**
+- **Customer Website:** [Beautique – Customer](https://beautique-client.onrender.com/)
+- **Admin Panel:** [Beautique – Admin](https://beautique-admin.onrender.com/)
+- **Backend API:** [Beautique – Backend](https://beautique-backend.onrender.com/)
 
 ## Features
 
